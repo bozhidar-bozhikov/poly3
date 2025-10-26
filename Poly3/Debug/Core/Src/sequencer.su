@@ -1,0 +1,6 @@
+../Core/Src/sequencer.c:22:6:Sequencer_Init	40	static
+../Core/Src/sequencer.c:29:26:getDefaultSequencer	48	static
+../Core/Src/sequencer.c:42:26:createShape	32	static
+../Core/Src/sequencer.c:67:13:destroyShape	16	static
+../Core/Src/sequencer.c:77:6:addShape	16	static
+../Core/Src/sequencer.c:88:6:removeShape	16	static

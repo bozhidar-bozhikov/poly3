@@ -7,6 +7,10 @@
 
 #include "display.h"
 #include "st7789.h"
+#include "sequencer.h"
+
+//4 arrays vseki ima po n tochki
+//array s 4 elementa, vseki koito e array s n elementa??
 
 void Display_Init(void)
 {
@@ -22,5 +26,6 @@ void Display_Main(void) {
 	ST7789_DrawFilledCircle(CIRCLE_CENTER_X, CIRCLE_CENTER_Y, CIRCLE_RADIUS, GRAY);
 	ST7789_DrawFilledCircle(CIRCLE_CENTER_X, CIRCLE_CENTER_Y, CIRCLE_RADIUS - 2, BLACK);
 }
+
 
 
