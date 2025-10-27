@@ -7,7 +7,7 @@
 ../Core/Src/main.c:364:13:MX_DMA_Init	16	static
 ../Core/Src/main.c:382:13:MX_GPIO_Init	48	static
 ../Core/Src/main.c:437:6:StartDisplayTask	16	static
-../Core/Src/main.c:455:6:StartSequencerTask	16	static
-../Core/Src/main.c:473:6:StartMidiOutTask	16	static
-../Core/Src/main.c:492:6:HAL_TIM_PeriodElapsedCallback	16	static
-../Core/Src/main.c:510:6:Error_Handler	4	static,ignoring_inline_asm
+../Core/Src/main.c:459:6:StartSequencerTask	16	static
+../Core/Src/main.c:477:6:StartMidiOutTask	16	static
+../Core/Src/main.c:496:6:HAL_TIM_PeriodElapsedCallback	16	static
+../Core/Src/main.c:514:6:Error_Handler	4	static,ignoring_inline_asm
