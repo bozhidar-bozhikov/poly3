@@ -2,6 +2,7 @@
 "./Core/Src/fonts.o"
 "./Core/Src/freertos.o"
 "./Core/Src/main.o"
+"./Core/Src/midi.o"
 "./Core/Src/sequencer.o"
 "./Core/Src/st7789.o"
 "./Core/Src/stm32f4xx_hal_msp.o"

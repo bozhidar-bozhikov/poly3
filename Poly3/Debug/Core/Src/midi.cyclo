@@ -1,0 +1,4 @@
+../Core/Src/midi.c:11:6:MIDI_Init	4
+../Core/Src/midi.c:29:6:MIDI_NoteOn	1
+../Core/Src/midi.c:37:6:MIDI_NoteOff	1
+../Core/Src/midi.c:45:6:MIDI_Test	4

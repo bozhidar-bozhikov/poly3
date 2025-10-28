@@ -1,6 +1,6 @@
 ../Core/Inc/display.h:36:21:polarToCartesian	40	static
 ../Core/Src/display.c:18:6:Display_Init	8	static
-../Core/Src/display.c:32:6:Display_Main	8	static
-../Core/Src/display.c:38:6:DrawShapes	8	static
-../Core/Src/display.c:46:6:DrawShape	136	dynamic
-../Core/Src/display.c:74:10:getColorForIndex	24	static
+../Core/Src/display.c:33:6:Display_Main	8	static
+../Core/Src/display.c:39:6:DrawShapes	8	static
+../Core/Src/display.c:47:6:DrawShape	136	dynamic
+../Core/Src/display.c:75:10:getColorForIndex	24	static
