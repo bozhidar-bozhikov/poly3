@@ -1,0 +1,6 @@
+../Core/Src/sequencer.c:22:6:Sequencer_Init	1
+../Core/Src/sequencer.c:29:26:getDefaultSequencer	1
+../Core/Src/sequencer.c:42:26:createShape	4
+../Core/Src/sequencer.c:67:13:destroyShape	1
+../Core/Src/sequencer.c:77:6:addShape	2
+../Core/Src/sequencer.c:88:6:removeShape	1

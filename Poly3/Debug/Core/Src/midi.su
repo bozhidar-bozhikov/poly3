@@ -1,0 +1,2 @@
+../Core/Src/midi.c:11:6:MIDI_NoteOn	24	static
+../Core/Src/midi.c:22:6:MIDI_Play_Spectrum	16	static
