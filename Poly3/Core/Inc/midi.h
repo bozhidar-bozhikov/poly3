@@ -10,7 +10,7 @@
 #include "main.h"
 #include "stm32f4xx_hal.h"
 
-// choose a port for MIDI
+// choose a port for MIDI (uart2 seems to not work because its occupied by the jtag)
 extern UART_HandleTypeDef huart3;
 #define MIDI_UART_PORT huart3
 

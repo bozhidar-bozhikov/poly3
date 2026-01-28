@@ -1,0 +1,9 @@
+../Core/Src/potentiometer.c:24:17:get_filtered_value	16	static
+../Core/Src/potentiometer.c:28:17:apply_log_curve	24	static
+../Core/Src/potentiometer.c:36:6:pot_init	40	static
+../Core/Src/potentiometer.c:60:6:pot_update	40	static
+../Core/Src/potentiometer.c:112:10:pot_get_raw_value	16	static
+../Core/Src/potentiometer.c:116:9:pot_get_MIDI_value	16	static
+../Core/Src/potentiometer.c:120:7:pot_get_normalized	16	static
+../Core/Src/potentiometer.c:124:10:pot_get_range	24	static
+../Core/Src/potentiometer.c:129:6:pot_set_deadzone	16	static

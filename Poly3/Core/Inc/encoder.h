@@ -26,7 +26,7 @@ typedef enum {
 
 
 typedef struct {
-	int32_t index;
+	int8_t index;
     int32_t position;
     encoder_direction_t last_dir;
     uint8_t state;
