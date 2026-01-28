@@ -17,7 +17,7 @@ static SequencerShape_t *shapes[4];
 
 void Display_Init() {
 	ST7789_Init();
-	HAL_GPIO_TogglePin(MIDI_LED_GPIO_Port, MIDI_LED_Pin);
+	//HAL_GPIO_TogglePin(MIDI_LED_GPIO_Port, MIDI_LED_Pin);
 
 	shapes[0] = g_sequencer_pattern.shapes[0];
 	shapes[1] = g_sequencer_pattern.shapes[1];
