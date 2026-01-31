@@ -50,6 +50,8 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
+
+// ADC handles for potentiometers
 ADC_HandleTypeDef hadc1;
 
 SPI_HandleTypeDef hspi1;
@@ -62,6 +64,7 @@ UART_HandleTypeDef huart3;
 
 /* USER CODE BEGIN PV */
 encoder_t encoder1;
+encoder_t encoder2;
 potentiometer_t pot1;
 /* USER CODE END PV */
 
@@ -127,6 +130,7 @@ int main(void)
 	ST7789_Test();
 
 	encoder_init(&encoder1, 1);
+	encoder_init(&encoder2, 2);
 	pot_init(&pot1, &hadc1, ADC_CHANNEL_0, 1, POT_LINEAR);
   /* USER CODE END 2 */
 
@@ -138,27 +142,23 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
 		// Read pins (adjust to your actual GPIO)
-		/*
-		        bool pin_a = HAL_GPIO_ReadPin(ENC_A_GPIO_Port, ENC_A_Pin);
-		        bool pin_b = HAL_GPIO_ReadPin(ENC_B_GPIO_Port, ENC_B_Pin);
-		        bool pin_sw = HAL_GPIO_ReadPin(ENC_SW_GPIO_Port, ENC_SW_Pin);
 
 		        // Update encoder
-		        encoder_update(&encoder1, pin_a, pin_b);
+		        encoder_update(&encoder1);
 
 		        // Update button
-		        encoder_update_button(&encoder1, pin_sw);
+		        encoder_update_button(&encoder1);
 
 		        HAL_Delay(1);  // Poll every 1ms
-		        */
+
 		// Update pots
-		        if (pot_update(&pot1)) {
+		       /* if (pot_update(&pot1)) {
 		            uint16_t bpm = pot_get_range(&pot1, 60, 240);  // 60-240 BPM
 		            debug_printf("Tempo: %d BPM\n\r", bpm);
 		            // Send MIDI CC or update tempo
 		        }
 
-		        HAL_Delay(50);
+		        HAL_Delay(50);*/
 	}
   /* USER CODE END 3 */
 }
@@ -459,11 +459,11 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(B1_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : ENC_SW_Pin */
-  GPIO_InitStruct.Pin = ENC_SW_Pin;
+  /*Configure GPIO pins : ENC_1SW_Pin ENC_2SW_Pin */
+  GPIO_InitStruct.Pin = ENC_1SW_Pin|ENC_2SW_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_PULLUP;
-  HAL_GPIO_Init(ENC_SW_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
   /*Configure GPIO pin : ST7789_RST_Pin */
   GPIO_InitStruct.Pin = ST7789_RST_Pin;
@@ -479,8 +479,14 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : ENC_A_Pin ENC_B_Pin */
-  GPIO_InitStruct.Pin = ENC_A_Pin|ENC_B_Pin;
+  /*Configure GPIO pins : ENC_2A_Pin ENC_2B_Pin */
+  GPIO_InitStruct.Pin = ENC_2A_Pin|ENC_2B_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
+  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+
+  /*Configure GPIO pins : ENC_1A_Pin ENC_1B_Pin */
+  GPIO_InitStruct.Pin = ENC_1A_Pin|ENC_1B_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
   GPIO_InitStruct.Pull = GPIO_PULLUP;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);

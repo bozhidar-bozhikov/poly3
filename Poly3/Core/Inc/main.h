@@ -63,8 +63,8 @@ void Error_Handler(void);
 #define ST7789_SCL_GPIO_Port GPIOA
 #define ST7789_SDA_Pin GPIO_PIN_7
 #define ST7789_SDA_GPIO_Port GPIOA
-#define ENC_SW_Pin GPIO_PIN_7
-#define ENC_SW_GPIO_Port GPIOC
+#define ENC_1SW_Pin GPIO_PIN_7
+#define ENC_1SW_GPIO_Port GPIOC
 #define ST7789_RST_Pin GPIO_PIN_9
 #define ST7789_RST_GPIO_Port GPIOC
 #define ST7789_DC_Pin GPIO_PIN_8
@@ -75,12 +75,18 @@ void Error_Handler(void);
 #define TMS_GPIO_Port GPIOA
 #define TCK_Pin GPIO_PIN_14
 #define TCK_GPIO_Port GPIOA
+#define ENC_2SW_Pin GPIO_PIN_10
+#define ENC_2SW_GPIO_Port GPIOC
+#define ENC_2A_Pin GPIO_PIN_11
+#define ENC_2A_GPIO_Port GPIOC
+#define ENC_2B_Pin GPIO_PIN_12
+#define ENC_2B_GPIO_Port GPIOC
 #define SWO_Pin GPIO_PIN_3
 #define SWO_GPIO_Port GPIOB
-#define ENC_A_Pin GPIO_PIN_4
-#define ENC_A_GPIO_Port GPIOB
-#define ENC_B_Pin GPIO_PIN_5
-#define ENC_B_GPIO_Port GPIOB
+#define ENC_1A_Pin GPIO_PIN_4
+#define ENC_1A_GPIO_Port GPIOB
+#define ENC_1B_Pin GPIO_PIN_5
+#define ENC_1B_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
 

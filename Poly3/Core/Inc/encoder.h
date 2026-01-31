@@ -33,14 +33,21 @@ typedef struct {
     bool button_pressed;
     bool button_changed;
     uint32_t last_button_time;
+
+    unsigned long port_A;
+    unsigned long pin_A;
+    unsigned long port_B;
+    unsigned long pin_B;
+    unsigned long port_SW;
+    unsigned long pin_SW;
 } encoder_t;
 
 
 void encoder_init(encoder_t* enc, int32_t index);
 
-int8_t encoder_update(encoder_t* enc, bool pin_a, bool pin_b);
+int8_t encoder_update(encoder_t* enc);
 
-void encoder_update_button(encoder_t* enc, bool button_pin);
+void encoder_update_button(encoder_t* enc);
 
 int32_t encoder_get_position(encoder_t* enc);
 
